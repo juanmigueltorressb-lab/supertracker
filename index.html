@@ -45,40 +45,40 @@
 * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 html, body { height: 100%; overflow: hidden; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg3); color: var(--text); }
 #app { display: flex; flex-direction: column; height: 100%; max-width: 480px; margin: 0 auto; background: var(--bg3); }
-
+ 
 /* TAB BAR */
 .tab-bar { display: flex; background: var(--bg); border-top: 0.5px solid var(--border); padding-bottom: var(--safe-bottom); order: 2; flex-shrink: 0; }
 .tab { flex: 1; padding: 10px 4px 8px; font-size: 11px; color: var(--text3); text-align: center; cursor: pointer; border: none; background: none; display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .tab i { font-size: 22px; }
 .tab.active { color: var(--green); }
-
+ 
 /* VIEWS */
 .views { flex: 1; overflow-y: auto; order: 1; -webkit-overflow-scrolling: touch; }
 .view { display: none; padding: 16px; flex-direction: column; gap: 14px; min-height: 100%; }
 .view.active { display: flex; }
-
+ 
 /* CARDS */
 .card { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-lg); padding: 16px; }
 .section-label { font-size: 12px; color: var(--text2); font-weight: 500; text-transform: uppercase; letter-spacing: .04em; }
-
+ 
 /* BUTTONS */
 .btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 16px; border-radius: var(--radius); border: 0.5px solid var(--border2); background: none; font-size: 14px; color: var(--text); cursor: pointer; width: 100%; font-weight: 500; }
 .btn:active { opacity: .8; transform: scale(.98); }
 .btn.primary { background: var(--green); color: #fff; border-color: var(--green); }
 .btn.danger { border-color: var(--red); color: var(--red); }
 .btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-
+ 
 /* UPLOAD ZONE */
 .upload-zone { border: 1.5px dashed var(--border2); border-radius: var(--radius-lg); padding: 40px 16px; text-align: center; cursor: pointer; background: var(--bg2); }
 .upload-zone i { font-size: 48px; color: var(--green); display: block; margin-bottom: 10px; }
 .upload-zone p { font-size: 15px; color: var(--text2); margin-bottom: 4px; }
 .upload-zone small { font-size: 12px; color: var(--text3); }
 input[type=file] { display: none; }
-
+ 
 /* CROP */
 .crop-container { position: relative; width: 100%; background: #000; border-radius: var(--radius); overflow: hidden; touch-action: none; user-select: none; }
 .crop-container canvas { display: block; width: 100%; height: auto; }
-
+ 
 /* FORM FIELDS */
 .field { display: flex; flex-direction: column; gap: 5px; }
 .field label { font-size: 12px; color: var(--text2); font-weight: 500; display: flex; align-items: center; gap: 6px; }
@@ -90,7 +90,7 @@ input[type=file] { display: none; }
 .conf-high { background: var(--green-light); color: var(--green-dark); }
 .conf-med  { background: var(--amber-light); color: var(--amber); }
 .conf-low  { background: var(--red-light); color: var(--red); }
-
+ 
 /* ITEMS TABLE */
 .items-header { display: grid; grid-template-columns: 1fr 50px 72px 28px; gap: 6px; padding: 0 0 6px; border-bottom: 0.5px solid var(--border); }
 .items-header span { font-size: 11px; color: var(--text3); }
@@ -100,32 +100,32 @@ input[type=file] { display: none; }
 .item-row input { font-size: 13px; padding: 5px 7px; border-radius: 6px; border: 0.5px solid var(--border); background: var(--bg2); color: var(--text); width: 100%; }
 .rm-btn { background: none; border: none; color: var(--text3); cursor: pointer; font-size: 18px; padding: 2px; display: flex; align-items: center; justify-content: center; }
 .add-row-btn { font-size: 13px; color: var(--green); background: none; border: none; cursor: pointer; display: flex; align-items: center; gap: 4px; padding: 8px 0 0; }
-
+ 
 /* VALIDATION BOX */
 .val-box { border-radius: var(--radius); padding: 10px 12px; font-size: 13px; display: flex; align-items: center; gap: 8px; }
 .val-box.ok { background: var(--green-light); color: var(--green-dark); }
 .val-box.warn { background: var(--amber-light); color: var(--amber); }
-
+ 
 /* AI STATUS */
 .ai-status { border-radius: var(--radius); padding: 12px; background: var(--bg2); font-size: 13px; color: var(--text2); line-height: 1.6; }
 .ai-status h4 { font-size: 13px; font-weight: 600; color: var(--green); margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
 .spin { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(29,158,117,.3); border-top-color: var(--green); border-radius: 50%; animation: spin .7s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
-
+ 
 /* METRICS */
 .metric-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .metric-card { background: var(--bg2); border-radius: var(--radius); padding: 12px; }
 .metric-label { font-size: 11px; color: var(--text2); margin-bottom: 4px; }
 .metric-value { font-size: 20px; font-weight: 600; color: var(--text); }
 .metric-sub { font-size: 11px; color: var(--text3); margin-top: 2px; }
-
+ 
 /* BARS */
 .bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
 .bar-name { font-size: 12px; color: var(--text2); width: 85px; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .bar-track { flex: 1; background: var(--bg2); border-radius: 4px; height: 18px; overflow: hidden; }
 .bar-fill { height: 100%; border-radius: 4px; transition: width .4s; }
 .bar-val { font-size: 12px; font-weight: 500; width: 65px; text-align: right; flex-shrink: 0; color: var(--text); }
-
+ 
 /* TICKETS LIST */
 .ticket-item { display: flex; align-items: center; gap: 10px; padding: 12px; background: var(--bg); border-radius: var(--radius-lg); border: 0.5px solid var(--border); cursor: pointer; }
 .ticket-item:active { background: var(--bg2); }
@@ -136,7 +136,7 @@ input[type=file] { display: none; }
 .ticket-super { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .ticket-meta { font-size: 12px; color: var(--text2); margin-top: 2px; }
 .ticket-amount { font-size: 15px; font-weight: 600; color: var(--green); flex-shrink: 0; }
-
+ 
 /* STEP INDICATOR */
 .steps { display: flex; align-items: center; gap: 0; }
 .step-dot { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; flex-shrink: 0; }
@@ -145,39 +145,39 @@ input[type=file] { display: none; }
 .step-dot.pending { background: var(--bg2); color: var(--text3); }
 .step-line { flex: 1; height: 1px; background: var(--border2); }
 .step-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--text3); margin-top: 4px; padding: 0 6px; }
-
+ 
 /* PIE LEGEND */
 .pie-item { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-bottom: 0.5px solid var(--border); }
 .pie-item:last-child { border-bottom: none; }
 .pie-dot { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
 .pie-name { font-size: 13px; flex: 1; }
 .pie-pct { font-size: 12px; color: var(--text2); font-weight: 500; }
-
+ 
 /* EMPTY */
 .empty { text-align: center; padding: 40px 16px; color: var(--text3); }
 .empty i { font-size: 48px; display: block; margin-bottom: 10px; }
 .empty p { font-size: 14px; }
-
+ 
 /* TREND */
 .trend-bars { display: flex; align-items: flex-end; gap: 3px; height: 60px; }
 .tbar { flex: 1; background: #9FE1CB; border-radius: 3px 3px 0 0; min-height: 4px; transition: height .3s; }
 .tbar.latest { background: var(--green); }
-
+ 
 /* MODAL (faux overlay) */
 .overlay { display: none; background: rgba(0,0,0,0.55); min-height: 100vh; align-items: flex-end; justify-content: center; padding: 0; }
 .overlay.open { display: flex; }
 .modal { background: var(--bg); border-radius: 20px 20px 0 0; padding: 20px 20px calc(20px + var(--safe-bottom)); width: 100%; max-width: 480px; max-height: 88vh; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; }
 .modal-handle { width: 40px; height: 4px; background: var(--border2); border-radius: 2px; margin: 0 auto 4px; }
 .modal-title { font-size: 17px; font-weight: 600; }
-
+ 
 /* TOAST */
 #toast { position: fixed; bottom: calc(80px + var(--safe-bottom)); left: 50%; transform: translateX(-50%); background: var(--text); color: var(--bg); padding: 9px 20px; border-radius: 99px; font-size: 13px; font-weight: 500; z-index: 999; opacity: 0; transition: opacity .2s; pointer-events: none; white-space: nowrap; }
-
+ 
 /* INSTALL BANNER */
 #install-banner { display: none; background: var(--green-light); border: 0.5px solid var(--green); border-radius: var(--radius); padding: 12px 14px; flex-direction: row; align-items: center; gap: 10px; }
 #install-banner p { flex: 1; font-size: 13px; color: var(--green-dark); }
 #install-banner button { font-size: 12px; padding: 6px 12px; border-radius: 6px; background: var(--green); color: #fff; border: none; cursor: pointer; font-weight: 500; flex-shrink: 0; }
-
+ 
 /* API KEY input */
 #apikey-banner { background: var(--amber-light); border: 0.5px solid var(--amber); border-radius: var(--radius); padding: 12px; display: flex; flex-direction: column; gap: 8px; }
 #apikey-banner p { font-size: 13px; color: var(--amber); font-weight: 500; }
@@ -189,7 +189,7 @@ input[type=file] { display: none; }
 <body>
 <div id="app">
   <div class="views" id="views">
-
+ 
     <!-- HOME -->
     <div class="view active" id="view-home">
       <div id="install-banner">
@@ -214,7 +214,7 @@ input[type=file] { display: none; }
       </div>
       <button class="btn primary" onclick="showView('add')"><i class="ti ti-camera-plus"></i> Cargar nuevo ticket</button>
     </div>
-
+ 
     <!-- ADD -->
     <div class="view" id="view-add">
       <div id="apikey-banner" style="display:none">
@@ -223,7 +223,7 @@ input[type=file] { display: none; }
         <button class="btn primary" onclick="saveApiKey()" style="margin-top:4px"><i class="ti ti-check"></i> Guardar y continuar</button>
         <small>Tu clave se guarda solo en este dispositivo y nunca se comparte.</small>
       </div>
-
+ 
       <div class="steps" id="step-indicator">
         <div class="step-dot active" id="s1">1</div>
         <div class="step-line"></div>
@@ -232,9 +232,9 @@ input[type=file] { display: none; }
         <div class="step-dot pending" id="s3">3</div>
       </div>
       <div class="step-labels"><span>Foto</span><span>Recortar</span><span>Confirmar</span></div>
-
+ 
       <input type="file" id="file-input" accept="image/*" capture="environment" onchange="handleFile(event)">
-
+ 
       <!-- PASO 1 -->
       <div id="step-upload">
         <div class="upload-zone" onclick="document.getElementById('file-input').click()">
@@ -243,7 +243,7 @@ input[type=file] { display: none; }
           <small>Fotografialo completo, lo recortamos después</small>
         </div>
       </div>
-
+ 
       <!-- PASO 2 -->
       <div id="step-crop" style="display:none;flex-direction:column;gap:10px">
         <p style="font-size:13px;color:var(--text2)">Arrastrá las esquinas verdes para enmarcar solo el ticket:</p>
@@ -254,14 +254,14 @@ input[type=file] { display: none; }
           <button class="btn primary" onclick="applyCrop()"><i class="ti ti-check"></i> Recortar y analizar</button>
         </div>
       </div>
-
+ 
       <!-- PASO 3 -->
       <div id="step-form" style="display:none;flex-direction:column;gap:12px">
         <div class="ai-status" id="ai-status">
           <h4><span class="spin"></span> Analizando ticket...</h4>
           <p>La IA está leyendo el recorte con pre-procesamiento de imagen...</p>
         </div>
-
+ 
         <div class="card" style="display:flex;flex-direction:column;gap:12px">
           <div class="field">
             <label>Supermercado <span class="confidence-badge" id="conf-super"></span></label>
@@ -277,7 +277,7 @@ input[type=file] { display: none; }
           </div>
           <div id="val-msg"></div>
         </div>
-
+ 
         <div class="card">
           <div style="font-size:13px;font-weight:600;margin-bottom:10px">Productos detectados</div>
           <div class="items-header">
@@ -286,14 +286,14 @@ input[type=file] { display: none; }
           <div class="items-list" id="items-list"></div>
           <button class="add-row-btn" onclick="addItemRow()"><i class="ti ti-plus"></i> Agregar producto</button>
         </div>
-
+ 
         <div class="btn-grid">
           <button class="btn" onclick="goBackToCrop()"><i class="ti ti-arrow-left"></i> Recortar de nuevo</button>
           <button class="btn primary" onclick="saveTicket()"><i class="ti ti-device-floppy"></i> Guardar</button>
         </div>
       </div>
     </div>
-
+ 
     <!-- STATS -->
     <div class="view" id="view-stats">
       <div class="section-label">Estadísticas</div>
@@ -314,7 +314,7 @@ input[type=file] { display: none; }
         <div id="stat-proj" style="font-size:13px;color:var(--text2)">Necesitás al menos 2 tickets.</div>
       </div>
     </div>
-
+ 
     <!-- TICKETS -->
     <div class="view" id="view-tickets">
       <div style="display:flex;align-items:center;justify-content:space-between">
@@ -323,17 +323,61 @@ input[type=file] { display: none; }
       </div>
       <div id="tickets-list"><div class="empty"><i class="ti ti-receipt-off"></i><p>No hay tickets cargados</p></div></div>
     </div>
-
+ 
+    <!-- CONFIG -->
+    <div class="view" id="view-config">
+      <div class="section-label">Configuración</div>
+ 
+      <!-- BACKUP -->
+      <div class="card" style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px"><i class="ti ti-database-export" style="color:var(--green)"></i> Backup de datos</div>
+        <p style="font-size:13px;color:var(--text2)">Guardá una copia de todos tus tickets. Si cambiás de dispositivo o se borran los datos, podés restaurarlos.</p>
+        <button class="btn primary" onclick="exportBackup()"><i class="ti ti-download"></i> Exportar backup (JSON)</button>
+        <button class="btn" onclick="document.getElementById('import-input').click()"><i class="ti ti-upload"></i> Importar backup</button>
+        <input type="file" id="import-input" accept=".json" style="display:none" onchange="importBackup(event)">
+        <div id="import-status"></div>
+      </div>
+ 
+      <!-- EXCEL -->
+      <div class="card" style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px"><i class="ti ti-file-spreadsheet" style="color:#217346"></i> Exportar a Excel</div>
+        <p style="font-size:13px;color:var(--text2)">Descargá todos tus tickets en un archivo Excel con hoja de resumen y detalle de productos.</p>
+        <button class="btn" onclick="exportExcel()" style="border-color:#217346;color:#217346"><i class="ti ti-file-spreadsheet"></i> Descargar Excel (.xlsx)</button>
+      </div>
+ 
+      <!-- API KEY -->
+      <div class="card" style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px"><i class="ti ti-key" style="color:var(--amber)"></i> API Key de Anthropic</div>
+        <p style="font-size:13px;color:var(--text2)">Necesaria para que la IA analice los tickets automáticamente.</p>
+        <div class="field">
+          <input type="password" id="config-apikey" placeholder="sk-ant-..." style="font-size:13px">
+        </div>
+        <button class="btn primary" onclick="saveApiKeyFromConfig()"><i class="ti ti-check"></i> Guardar API Key</button>
+        <p style="font-size:11px;color:var(--text3)">Obtenela en console.anthropic.com/api-keys · Se guarda solo en este dispositivo.</p>
+      </div>
+ 
+      <!-- INFO -->
+      <div class="card" style="display:flex;flex-direction:column;gap:6px">
+        <div style="font-size:14px;font-weight:600">Información</div>
+        <div style="font-size:13px;color:var(--text2);display:flex;justify-content:space-between"><span>Versión</span><span>v4.1</span></div>
+        <div style="font-size:13px;color:var(--text2);display:flex;justify-content:space-between"><span>Tickets guardados</span><span id="config-count">0</span></div>
+        <div style="font-size:13px;color:var(--text2);display:flex;justify-content:space-between"><span>Espacio usado</span><span id="config-size">0 KB</span></div>
+      </div>
+ 
+      <button class="btn danger" onclick="confirmClear()"><i class="ti ti-trash"></i> Borrar todos los datos</button>
+    </div>
+ 
   </div><!-- /views -->
-
+ 
   <nav class="tab-bar">
     <button class="tab active" id="tab-home" onclick="showView('home')"><i class="ti ti-home"></i>Inicio</button>
     <button class="tab" id="tab-add" onclick="showView('add')"><i class="ti ti-camera-plus"></i>Cargar</button>
     <button class="tab" id="tab-stats" onclick="showView('stats')"><i class="ti ti-chart-bar"></i>Stats</button>
     <button class="tab" id="tab-tickets" onclick="showView('tickets')"><i class="ti ti-receipt"></i>Tickets</button>
+    <button class="tab" id="tab-config" onclick="showView('config')"><i class="ti ti-settings"></i>Config</button>
   </nav>
 </div>
-
+ 
 <!-- MODAL VER TICKET -->
 <div class="overlay" id="overlay-view">
   <div class="modal" id="modal-view">
@@ -349,7 +393,7 @@ input[type=file] { display: none; }
     </div>
   </div>
 </div>
-
+ 
 <!-- MODAL EDITAR -->
 <div class="overlay" id="overlay-edit">
   <div class="modal" id="modal-edit">
@@ -377,19 +421,19 @@ input[type=file] { display: none; }
     </div>
   </div>
 </div>
-
+ 
 <div id="toast"></div>
-
+ 
 <script>
 const COLORS = ['#1D9E75','#185FA5','#BA7517','#993556','#534AB7','#639922','#993C1D','#0F6E56'];
 let tickets = [];
 let editingId = null;
 let deferredPrompt = null;
-
+ 
 try { const s = localStorage.getItem('supertracker_v4'); if (s) tickets = JSON.parse(s); } catch(e) {}
-
+ 
 function save() { try { localStorage.setItem('supertracker_v4', JSON.stringify(tickets)); } catch(e) {} }
-
+ 
 function getApiKey() { return localStorage.getItem('st_apikey') || ''; }
 function saveApiKey() {
   const k = document.getElementById('apikey-input').value.trim();
@@ -398,7 +442,7 @@ function saveApiKey() {
   document.getElementById('apikey-banner').style.display = 'none';
   showToast('API Key guardada');
 }
-
+ 
 // PWA install
 window.addEventListener('beforeinstallprompt', e => {
   e.preventDefault(); deferredPrompt = e;
@@ -412,12 +456,12 @@ document.getElementById('install-btn').addEventListener('click', async () => {
   deferredPrompt = null;
 });
 window.addEventListener('appinstalled', () => { document.getElementById('install-banner').style.display = 'none'; });
-
+ 
 // Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
 }
-
+ 
 function showView(id) {
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.getElementById('view-' + id).classList.add('active');
@@ -428,36 +472,37 @@ function showView(id) {
   if (id === 'stats') renderStats();
   if (id === 'tickets') renderTickets();
   if (id === 'add') checkApiKey();
+  if (id === 'config') renderConfigInfo();
 }
-
+ 
 function checkApiKey() {
   const banner = document.getElementById('apikey-banner');
   banner.style.display = getApiKey() ? 'none' : 'flex';
 }
-
+ 
 function openOverlay(id) { document.getElementById(id).classList.add('open'); }
 function closeOverlay(id) { document.getElementById(id).classList.remove('open'); }
-
+ 
 function setStep(n) {
   [1,2,3].forEach(i => {
     const d = document.getElementById('s' + i);
     d.className = 'step-dot ' + (i < n ? 'done' : i === n ? 'active' : 'pending');
   });
 }
-
+ 
 // ---- CROP ----
 let srcImage = null, cropCanvas = null, cropCtx = null;
 let handles = [], dragging = -1, dragOffX = 0, dragOffY = 0;
 let croppedDataUrl = null;
 const HR = 16;
-
+ 
 function handleFile(e) {
   const f = e.target.files[0]; if (!f) return;
   const r = new FileReader();
   r.onload = ev => { srcImage = new Image(); srcImage.onload = initCrop; srcImage.src = ev.target.result; };
   r.readAsDataURL(f);
 }
-
+ 
 function initCrop() {
   document.getElementById('step-upload').style.display = 'none';
   document.getElementById('step-crop').style.display = 'flex';
@@ -479,7 +524,7 @@ function initCrop() {
   cropCanvas.addEventListener('touchmove', onDragT, {passive:false});
   cropCanvas.addEventListener('touchend', endDrag);
 }
-
+ 
 function drawCrop() {
   const c = cropCanvas, ctx = cropCtx;
   ctx.clearRect(0, 0, c.width, c.height);
@@ -503,7 +548,7 @@ function drawCrop() {
     ctx.strokeStyle = '#fff'; ctx.lineWidth = 2.5; ctx.stroke();
   });
 }
-
+ 
 function getPos(e, c) { const r = c.getBoundingClientRect(); return {x:(e.clientX-r.left)*c.width/r.width,y:(e.clientY-r.top)*c.height/r.height}; }
 function getPosT(e, c) { return getPos(e.touches[0], c); }
 function startDrag(e) { tryDrag(getPos(e,cropCanvas)); }
@@ -514,7 +559,7 @@ function onDragT(e) { if(dragging<0)return; e.preventDefault(); moveHandle(getPo
 function moveHandle(p) { handles[dragging].x=Math.max(0,Math.min(cropCanvas.width,p.x+dragOffX));handles[dragging].y=Math.max(0,Math.min(cropCanvas.height,p.y+dragOffY));drawCrop(); }
 function endDrag() { dragging = -1; }
 function resetCrop() { const pad=Math.round(Math.min(cropCanvas.width,cropCanvas.height)*0.07);handles=[{x:pad,y:pad},{x:cropCanvas.width-pad,y:pad},{x:cropCanvas.width-pad,y:cropCanvas.height-pad},{x:pad,y:cropCanvas.height-pad}];drawCrop(); }
-
+ 
 // Pre-procesamiento de imagen: contraste y nitidez
 function enhanceImage(src) {
   const canvas = document.createElement('canvas');
@@ -541,7 +586,7 @@ function enhanceImage(src) {
   ctx.putImageData(id, 0, 0);
   return canvas.toDataURL('image/jpeg', 0.95);
 }
-
+ 
 function applyCrop() {
   const xs=handles.map(h=>h.x),ys=handles.map(h=>h.y);
   const x0=Math.min(...xs),y0=Math.min(...ys),cw=Math.max(...xs)-x0,ch=Math.max(...ys)-y0;
@@ -556,9 +601,9 @@ function applyCrop() {
   setStep(3);
   analyzeTicket();
 }
-
+ 
 function goBackToCrop() { document.getElementById('step-crop').style.display='flex'; document.getElementById('step-form').style.display='none'; setStep(2); }
-
+ 
 // ---- ANÁLISIS IA ----
 function confBadge(level) {
   if (!level) return '';
@@ -566,21 +611,21 @@ function confBadge(level) {
   const labels = {alta:'Alta confianza',media:'Confianza media',baja:'Revisar'};
   return `<span class="confidence-badge ${map[level]||'conf-med'}">${labels[level]||level}</span>`;
 }
-
+ 
 async function analyzeTicket() {
   const statusEl = document.getElementById('ai-status');
   statusEl.innerHTML = '<h4><span class="spin"></span> Analizando ticket...</h4><p>Pre-procesando imagen y leyendo con IA...</p>';
-
+ 
   const b64 = croppedDataUrl.split(',')[1];
   const mt = croppedDataUrl.split(';')[0].split(':')[1] || 'image/jpeg';
   const apiKey = getApiKey();
   const headers = { 'Content-Type': 'application/json' };
   if (apiKey) headers['x-api-key'] = apiKey;
-
+ 
   const prompt = `Sos un sistema de OCR especializado en tickets de supermercados argentinos.
 Analizá esta imagen de ticket y extraé TODOS los datos con máxima precisión.
 Respondé ÚNICAMENTE con JSON válido, sin texto adicional, sin backticks, sin explicaciones.
-
+ 
 Formato exacto:
 {
   "supermercado": "nombre exacto del supermercado",
@@ -599,7 +644,7 @@ Formato exacto:
   },
   "observaciones": "máximo 2 oraciones sobre la compra o lo que no pudo leer"
 }
-
+ 
 Reglas importantes:
 - La fecha de hoy es ${new Date().toISOString().split('T')[0]}. Si no ves la fecha usá esta.
 - El total es el monto FINAL pagado (no el subtotal).
@@ -607,7 +652,7 @@ Reglas importantes:
 - Si un campo no se puede leer, usá null y marcá confianza "baja".
 - Incluí TODOS los productos visibles en el ticket.
 - Si hay descuentos o promociones, incluilos como ítem con precio negativo.`;
-
+ 
   try {
     const resp = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -633,7 +678,7 @@ Reglas importantes:
     populateForm({ supermercado:'', fecha: new Date().toISOString().split('T')[0], total:0, items:[], confianza:{} });
   }
 }
-
+ 
 function populateForm(d) {
   document.getElementById('f-super').value = d.supermercado || '';
   document.getElementById('f-date').value = d.fecha || new Date().toISOString().split('T')[0];
@@ -646,7 +691,7 @@ function populateForm(d) {
   (d.items || []).forEach(it => addItemRow(it.nombre, it.cantidad, it.precio_total || it.precio_unitario));
   validateTotal();
 }
-
+ 
 function validateTotal() {
   const totalEl = document.getElementById('f-total');
   const total = parseFloat(totalEl.value) || 0;
@@ -666,14 +711,14 @@ function validateTotal() {
     totalEl.className = 'warn';
   }
 }
-
+ 
 function addItemRow(name='', qty=1, price='', listId='items-list') {
   const list = document.getElementById(listId);
   const row = document.createElement('div'); row.className = 'item-row';
   row.innerHTML = `<input type="text" placeholder="Producto" value="${(name||'').replace(/"/g,'&quot;')}"><input type="number" placeholder="1" value="${qty}" min="1" step="1"><input type="number" placeholder="0.00" value="${price||''}" step="0.01" oninput="validateTotal()"><button class="rm-btn" onclick="this.parentElement.remove();validateTotal()"><i class="ti ti-x"></i></button>`;
   list.appendChild(row);
 }
-
+ 
 function saveTicket() {
   const sup = document.getElementById('f-super').value.trim() || 'Sin nombre';
   const fecha = document.getElementById('f-date').value || new Date().toISOString().split('T')[0];
@@ -686,7 +731,7 @@ function saveTicket() {
   tickets.push({ id: Date.now(), supermercado: sup, fecha, total, items, img: croppedDataUrl });
   save(); resetAdd(); showView('home'); showToast('Ticket guardado');
 }
-
+ 
 function resetAdd() {
   document.getElementById('file-input').value = '';
   document.getElementById('step-upload').style.display = 'block';
@@ -699,7 +744,7 @@ function resetAdd() {
   if (cropCanvas) { ['mousedown','mousemove','mouseup'].forEach(ev=>cropCanvas.removeEventListener(ev,eval(ev.replace('mouse','on'+ev[0].toUpperCase()+ev.slice(1))))); }
   cropCanvas = null; cropCtx = null; setStep(1);
 }
-
+ 
 // ---- VER / EDITAR ----
 function openTicket(id) {
   const t = tickets.find(x => x.id === id); if (!t) return;
@@ -717,7 +762,7 @@ function openTicket(id) {
   document.getElementById('mv-edit').onclick = () => openEditModal(id);
   closeOverlay('overlay-edit'); openOverlay('overlay-view');
 }
-
+ 
 function openEditModal(id) {
   const t = tickets.find(x => x.id === id); if (!t) return;
   editingId = id;
@@ -728,7 +773,7 @@ function openEditModal(id) {
   t.items.forEach(it => addItemRow(it.nombre, it.cantidad, it.precio, 'edit-items-list'));
   closeOverlay('overlay-view'); openOverlay('overlay-edit');
 }
-
+ 
 function saveEdit() {
   const idx = tickets.findIndex(t => t.id === editingId); if (idx < 0) return;
   const items = [];
@@ -739,16 +784,113 @@ function saveEdit() {
   tickets[idx] = { ...tickets[idx], supermercado: document.getElementById('e-super').value.trim()||tickets[idx].supermercado, fecha: document.getElementById('e-date').value||tickets[idx].fecha, total: parseFloat(document.getElementById('e-total').value)||tickets[idx].total, items };
   save(); closeOverlay('overlay-edit'); renderTickets(); renderHome(); showToast('Ticket actualizado');
 }
-
+ 
 function deleteTicket(id) {
   if (!confirm('¿Eliminar este ticket?')) return;
   tickets = tickets.filter(t => t.id !== id); save();
   closeOverlay('overlay-view'); closeOverlay('overlay-edit');
   renderTickets(); renderHome(); showToast('Ticket eliminado');
 }
-
+ 
 function confirmClear() { if (confirm('¿Borrar todos los tickets?')) { tickets=[]; save(); renderTickets(); renderHome(); } }
-
+ 
+// ---- BACKUP / EXPORT ----
+function exportBackup() {
+  if (!tickets.length) { showToast('No hay tickets para exportar'); return; }
+  const data = JSON.stringify({ version: 'v4', fecha: new Date().toISOString(), tickets }, null, 2);
+  const blob = new Blob([data], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `supertracker_backup_${new Date().toISOString().split('T')[0]}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast('Backup exportado');
+}
+ 
+function importBackup(e) {
+  const file = e.target.files[0]; if (!file) return;
+  const status = document.getElementById('import-status');
+  const r = new FileReader();
+  r.onload = ev => {
+    try {
+      const data = JSON.parse(ev.target.result);
+      const imported = data.tickets || (Array.isArray(data) ? data : null);
+      if (!imported) throw new Error('Formato inválido');
+      const existing = tickets.length;
+      // merge: no duplicar por id
+      const ids = new Set(tickets.map(t => t.id));
+      const nuevos = imported.filter(t => !ids.has(t.id));
+      tickets = [...tickets, ...nuevos];
+      save(); renderHome(); renderTickets(); renderConfigInfo();
+      status.innerHTML = `<div style="background:var(--green-light);color:var(--green-dark);padding:8px 10px;border-radius:var(--radius);font-size:13px;margin-top:4px">✓ Importados ${nuevos.length} tickets nuevos (${imported.length - nuevos.length} ya existían)</div>`;
+      showToast(`${nuevos.length} tickets importados`);
+    } catch(err) {
+      status.innerHTML = `<div style="background:var(--red-light);color:var(--red);padding:8px 10px;border-radius:var(--radius);font-size:13px;margin-top:4px">✗ Archivo inválido: ${err.message}</div>`;
+    }
+  };
+  r.readAsText(file);
+  e.target.value = '';
+}
+ 
+function exportExcel() {
+  if (!tickets.length) { showToast('No hay tickets para exportar'); return; }
+  // Generar CSV con BOM para Excel (compatible con Excel argentino)
+  const BOM = '\uFEFF';
+ 
+  // Hoja 1: Resumen por ticket
+  let csv1 = 'Fecha;Supermercado;Total ($);Cantidad productos\n';
+  [...tickets].sort((a,b) => a.fecha.localeCompare(b.fecha)).forEach(t => {
+    csv1 += `${t.fecha};${t.supermercado};${t.total};${t.items.length}\n`;
+  });
+ 
+  // Hoja 2: Detalle de productos
+  let csv2 = 'Fecha;Supermercado;Producto;Cantidad;Precio unitario\n';
+  [...tickets].sort((a,b) => a.fecha.localeCompare(b.fecha)).forEach(t => {
+    t.items.forEach(it => {
+      csv2 += `${t.fecha};${t.supermercado};${it.nombre};${it.cantidad};${it.precio}\n`;
+    });
+  });
+ 
+  // Exportar como dos archivos CSV separados
+  const fecha = new Date().toISOString().split('T')[0];
+ 
+  const blob1 = new Blob([BOM + csv1], { type: 'text/csv;charset=utf-8' });
+  const a1 = document.createElement('a');
+  a1.href = URL.createObjectURL(blob1);
+  a1.download = `supertracker_resumen_${fecha}.csv`;
+  a1.click();
+ 
+  setTimeout(() => {
+    const blob2 = new Blob([BOM + csv2], { type: 'text/csv;charset=utf-8' });
+    const a2 = document.createElement('a');
+    a2.href = URL.createObjectURL(blob2);
+    a2.download = `supertracker_productos_${fecha}.csv`;
+    a2.click();
+    showToast('2 archivos CSV descargados');
+  }, 500);
+}
+ 
+function renderConfigInfo() {
+  document.getElementById('config-count').textContent = tickets.length;
+  try {
+    const bytes = new Blob([localStorage.getItem('supertracker_v4') || '']).size;
+    document.getElementById('config-size').textContent = bytes > 1024 ? Math.round(bytes/1024) + ' KB' : bytes + ' B';
+  } catch(e) {}
+  const key = getApiKey();
+  if (key) document.getElementById('config-apikey').placeholder = 'sk-ant-••••••••' + key.slice(-4);
+}
+ 
+function saveApiKeyFromConfig() {
+  const k = document.getElementById('config-apikey').value.trim();
+  if (!k) { showToast('Ingresá una clave'); return; }
+  if (!k.startsWith('sk-ant-')) { showToast('Clave inválida, debe empezar con sk-ant-'); return; }
+  localStorage.setItem('st_apikey', k);
+  document.getElementById('config-apikey').value = '';
+  document.getElementById('config-apikey').placeholder = 'sk-ant-••••••••' + k.slice(-4);
+  showToast('API Key guardada');
+}
+ 
 // ---- RENDER ----
 function renderHome() {
   const total = tickets.reduce((a,t)=>a+t.total,0), count = tickets.length;
@@ -775,7 +917,7 @@ function renderHome() {
   const diff=last.total-prev.total;
   tl.textContent=`Último: $${Math.round(last.total).toLocaleString('es-AR')} (${diff>=0?'+':''}${Math.round(diff/prev.total*100)}% vs anterior)`;
 }
-
+ 
 function renderStats() {
   const sm={},pm={};
   tickets.forEach(t=>{
@@ -804,23 +946,24 @@ function renderStats() {
     projEl.innerHTML=`<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px"><div class="metric-card"><div class="metric-label">Mensual estimado</div><div class="metric-value" style="font-size:18px">$${monthly.toLocaleString('es-AR')}</div></div><div class="metric-card"><div class="metric-label">Anual estimado</div><div class="metric-value" style="font-size:18px">$${annual.toLocaleString('es-AR')}</div></div></div>`;
   }
 }
-
+ 
 function renderTickets() {
   const el = document.getElementById('tickets-list');
   if (!tickets.length) { el.innerHTML='<div class="empty"><i class="ti ti-receipt-off"></i><p>No hay tickets cargados</p></div>'; return; }
   const sorted = [...tickets].sort((a,b)=>b.fecha.localeCompare(a.fecha));
   el.innerHTML = sorted.map(t=>`<div class="ticket-item" onclick="openTicket(${t.id})">${t.img?`<img src="${t.img}" class="img-thumb">`:'<div class="ticket-dot"><i class="ti ti-receipt"></i></div>'}<div class="ticket-info"><div class="ticket-super">${t.supermercado}</div><div class="ticket-meta">${formatDate(t.fecha)} · ${t.items.length} productos</div></div><div style="display:flex;align-items:center;gap:6px"><div class="ticket-amount">$${Math.round(t.total).toLocaleString('es-AR')}</div><i class="ti ti-chevron-right" style="font-size:16px;color:var(--text3)"></i></div></div>`).join('');
 }
-
+ 
 function formatDate(d) { try { return new Date(d+'T12:00:00').toLocaleDateString('es-AR',{day:'2-digit',month:'short',year:'2-digit'}); } catch(e) { return d; } }
-
+ 
 function showToast(msg) {
   const t = document.getElementById('toast');
   t.textContent = msg; t.style.opacity = '1';
   clearTimeout(t._to); t._to = setTimeout(() => t.style.opacity='0', 2200);
 }
-
+ 
 renderHome();
 </script>
 </body>
 </html>
+ 
